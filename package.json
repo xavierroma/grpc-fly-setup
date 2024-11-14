@@ -1,0 +1,31 @@
+{
+  "name": "proto-fly-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx server.ts",
+    "build": "pnpm run build:proto && pnpm run build:ts",
+    "build:proto": "buf generate",
+    "build:ts": "tsc --project tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bufbuild/buf": "^1.46.0",
+    "@bufbuild/protobuf": "^1.0.0",
+    "@bufbuild/protoc-gen-es": "^1.0.0",
+    "@connectrpc/connect": "^1.0.0",
+    "@connectrpc/connect-fastify": "^1.6.1",
+    "@connectrpc/connect-node": "^1.6.1",
+    "@connectrpc/protoc-gen-connect-es": "^1.0.0",
+    "fastify": "^5.1.0",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.9",
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2"
+  }
+}
